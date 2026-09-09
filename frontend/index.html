@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Disaster Intelligence Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <h1>AI Disaster Intelligence Platform</h1>
+    </header>
+    
+    <main class="container">
+        <!-- Map Section -->
+        <section class="map-section">
+            <h2>Live Disaster Map</h2>
+            <div id="map"></div>
+        </section>
+
+        <div class="sidebar">
+            <!-- Prediction Form Section -->
+            <section class="prediction-section">
+                <h2>Predict Disaster</h2>
+                <form id="prediction-form">
+                    <label>Satellite Image:</label>
+                    <input type="file" id="sat-image"><br>
+                    
+                    <label>Tweet Text:</label>
+                    <input type="text" id="tweet-text"><br>
+                    
+                    <label>Weather Data (Temp, Precip, Wind):</label>
+                    <input type="text" id="weather-data"><br>
+                    
+                    <button type="button" onclick="runPredictions()">Analyze</button>
+                </form>
+                <div id="prediction-results"></div>
+            </section>
+
+            <!-- RAG Report Section -->
+            <section class="report-section">
+                <h2>Situation Report</h2>
+                <button type="button" onclick="generateReport()">Generate Report</button>
+                <div id="report-output"></div>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+# ================================================================
+#  AI Disaster Intelligence Platform — .gitignore
+# ================================================================
+
+# ── Python ───────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.so
+*.dylib
+
+# ── Virtual environments ─────────────────────────────────────────
+venv/
+env/
+.venv/
+.env.local
+
+# ── Environment / secrets ────────────────────────────────────────
+.env
+*.env
+
+# ── SQLite / Local DBs ──────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Raw data (never commit to Git) ──────────────────────────────
+data/raw/
+
+# ── Trained model files (large binaries) ────────────────────────
+models/satellite_model.pt
+models/nlp_model/
+models/xgboost_model.json
+models/xgboost_scaler.pkl
+models/xgboost_features.txt
+
+# ── ChromaDB vector store ────────────────────────────────────────
+chroma_db/
+
+# ── RAG corpus (scraped text, rebuild with scraper.py) ──────────
+rag/corpus/
+
+# ── Jupyter checkpoints ──────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ── Node / React ─────────────────────────────────────────────────
+frontend/node_modules/
+frontend/build/
+frontend/.cache/
+frontend/.env.local
+
+# ── IDEs / editors ───────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Logs ─────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Test artifacts ───────────────────────────────────────────────
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# ── Misc ─────────────────────────────────────────────────────────
+*.tmp
+*.bak
+
+# -- Auto-generated docs (do not push) --
+TECHNICAL_REPORT.md
+HOW_TO_RUN.md

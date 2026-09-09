@@ -1,0 +1,50 @@
+# ================================================================
+#  AI Disaster Intelligence Platform — Full Requirements
+#  Install:  pip install -r requirements.txt
+#
+#  NOTE: torch / transformers / xgboost are heavy. For training,
+#  use Google Colab and only install what you need locally.
+#  For local dev (backend + RAG only), comment out the ML section.
+# ================================================================
+
+# ── Web framework ─────────────────────────────────────────────
+fastapi==0.124.4
+uvicorn==0.38.0
+pydantic==2.12.5
+starlette==0.50.0
+python-multipart==0.0.9
+
+# ── Database ──────────────────────────────────────────────────
+SQLAlchemy==2.0.45
+pymongo>=4.6.0
+
+# ── Environment ───────────────────────────────────────────────
+python-dotenv==1.0.1
+
+# ── Data manipulation ─────────────────────────────────────────
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.4.2
+
+# ── RAG Pipeline ──────────────────────────────────────────────
+sentence-transformers==3.0.1
+langchain-text-splitters==0.2.2
+wikipedia==1.4.0
+groq>=0.9.0
+
+# ── ML — Forecasting ──────────────────────────────────────────
+xgboost==2.0.3
+joblib==1.4.2
+
+# ── ML — Deep Learning (comment out if only running backend) ──
+# torch==2.3.1
+# torchvision==0.18.1
+# transformers==4.41.2
+# Pillow==10.3.0
+
+# ── Image processing (lightweight — keep) ────────────────────
+Pillow==10.3.0
+
+# ── Visualization (training notebooks only) ──────────────────
+# matplotlib==3.9.0
+# seaborn==0.13.2
